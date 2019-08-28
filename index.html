@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="">
+
+    <link rel="stylesheet" href="css/dark-onsen-css-components.css">
+    <link rel="stylesheet" href="css/onsenui.css">
+    <link rel="stylesheet" href="css/onsen-css-components.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/onsenui.min.js"></script>
+  </head>
+
+  <body>
+    
+    <ons-navigator id="myNavigator" page="tab.html"></ons-navigator>
+    
+    <template id="tab.html">
+      <ons-page>
+        <ons-tabbar swipeable position="auto">
+          <ons-tab page="tab1.html" label="検索" icon="md-home" active></ons-tab>
+          <ons-tab page="tab2.html" label="メッセージ" icon="ion-md-chatboxes"></ons-tab>
+          <ons-tab page="tab3.html" label="プロフィール" icon="md-settings"></ons-tab>
+        </ons-tabbar>
+      </ons-page>
+    </template>
+
+    <template id="tab1.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">検索</div>
+        </ons-toolbar>
+
+        <ons-list>
+          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('profile.html')">
+            <div class="left">
+              <img class="list-item__thumbnail" src="img/40.jpg" />
+            </div>
+            <div class="center">
+               <span class="list-item__title">田中太郎</span>
+               <span class="list-item__subtitle">チャット内容</span>
+            </div>
+          </ons-list-item>
+
+          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('profile.html')">
+            <div class="left">
+              <img class="list-item__thumbnail" src="img/42.jpg" />
+            </div>
+            <div class="center">
+               <span class="list-item__title">山田花子</span>
+               <span class="list-item__subtitle">チャット内容</span>
+            </div>
+          </ons-list-item>
+        </ons-list>
+
+      </ons-page>
+    </template>
+
+    <template id="profile.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center">プロフィール</div>
+        </ons-toolbar>
+
+       <ons-fab position="top right">
+         <ons-icon icon="comment"></ons-icon>
+       </ons-fab>
+
+       <div class="main_img_div">
+         <img class="main_img" src="img/neko.jpg" alt="Logo" />
+       </div>
+
+        <ons-list>
+          <ons-list-header>個人情報</ons-list-header>
+          <ons-list-item>名前：田中太郎</ons-list-item>
+          <ons-list-item>年齢：33歳</ons-list-item>
+          <ons-list-item>自己紹介：よろしくお願いします。</ons-list-item>
+        </ons-list>
+
+      </ons-page>
+    </template>
+
+
+    <template id="tab2.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">チャット一覧</div>
+        </ons-toolbar>
+
+        <div class="tabbar tabbar--top tabbar--top-border">
+          <label class="tabbar__item tabbar--top-border__item">
+            <input type="radio" name="top-tabbar-b" checked="checked">
+            <button class="tabbar__button tabbar--top-border__button">友達</button>
+          </label>
+
+          <label class="tabbar__item tabbar--top-border__item">
+            <input type="radio" name="top-tabbar-b">
+            <button class="tabbar__button tabbar--top-border__button">申請済み</button>
+          </label>
+
+          <label class="tabbar__item tabbar--top-border__item">
+            <input type="radio" name="top-tabbar-b">
+            <button class="tabbar__button tabbar--top-border__button">未承認</button>
+          </label>
+        </div>
+
+        <ons-list>
+          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('chat.html')">
+            <div class="left">
+              <img src="img/40.jpg" />
+            </div>
+            <div class="center">
+               <span class="list-item__title">田中太郎</span>
+               <span class="list-item__subtitle">チャット内容</span>
+            </div>
+          </ons-list-item>
+        </ons-list>
+
+      </ons-page>
+    </template>
+
+    <template id="chat.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center">田中太郎</div>
+        </ons-toolbar>
+
+        <div class="content">
+          <ons-list id="chats">
+            <ons-list-item modifier="nodivider">
+              <div class="right">
+                <ons-button style="background-color: green">Hello World</ons-button>
+              </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="nodivider">
+              <ons-button>こんにちは。</ons-button>
+              <span class="list-item__subtitle">田中太郎</span>
+            </ons-list-item>
+
+          </ons-list>
+        </div>
+
+        <div class="send-area">
+          <ons-input id="message" placeholder="メッセージ"></ons-input>
+          <ons-button id="send" modifier="quiet">送信</ons-button>
+        </div>
+
+      </ons-page>
+    </template>
+
+    <template id="tab3.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">設定</div>
+        </ons-toolbar>
+
+        <ons-list>
+          <ons-list-header>個人情報</ons-list-header>
+          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('edit_profile.html')">プロフィール</ons-list-item>
+        </ons-list>
+        
+      </ons-page>
+    </template>
+
+    <template id="edit_profile.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center">プロフィール</div>
+        </ons-toolbar>
+
+        <ons-list>
+          <ons-list-header>個人情報</ons-list-header>
+          <ons-list-item><ons-input id="username" placeholder="名前"></ons-input></ons-list-item>
+          <ons-list-item><ons-input id="username" placeholder="年齢"></ons-input></ons-list-item>
+          <ons-list-item><textarea class="textarea" rows="5" placeholder="自己紹介"></textarea></ons-list-item>
+        </ons-list>
+
+      </ons-page>
+    </template>
+
+  </body>
+</html>
