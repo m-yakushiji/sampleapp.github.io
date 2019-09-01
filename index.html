@@ -19,15 +19,15 @@
   </head>
 
   <body>
-    
     <ons-navigator id="myNavigator" page="tab.html"></ons-navigator>
     
     <template id="tab.html">
       <ons-page>
         <ons-tabbar swipeable position="auto">
-          <ons-tab page="tab1.html" label="検索" icon="md-home" active></ons-tab>
+          <ons-tab page="tab1.html" label="探す" icon="md-search" active></ons-tab>
           <ons-tab page="tab2.html" label="メッセージ" icon="ion-md-chatboxes"></ons-tab>
-          <ons-tab page="tab3.html" label="プロフィール" icon="md-settings"></ons-tab>
+          <ons-tab page="tab3.html" label="プロフィール" icon="ion-md-person"></ons-tab>
+          <ons-tab page="tab4.html" label="設定" icon="md-settings"></ons-tab>
         </ons-tabbar>
       </ons-page>
     </template>
@@ -35,27 +35,31 @@
     <template id="tab1.html">
       <ons-page>
         <ons-toolbar>
-          <div class="center">検索</div>
+          <div class="center">探す</div>
         </ons-toolbar>
 
         <ons-list>
-          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('profile.html')">
+          <ons-list-item tappable onClick="myNavigator.pushPage('profile.html')">
             <div class="left">
               <img class="list-item__thumbnail" src="img/40.jpg" />
             </div>
             <div class="center">
-               <span class="list-item__title">田中太郎</span>
-               <span class="list-item__subtitle">チャット内容</span>
+                <span class="list-item__title">
+                  <span>田中太郎</span>
+                  <span>33歳</span>
+                  <span style="position: absolute; left:  350px;">少し前</span>
+                </span>
+               <span class="list-item__subtitle">よろしく！</span>
             </div>
           </ons-list-item>
 
-          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('profile.html')">
+          <ons-list-item tappable onClick="myNavigator.pushPage('profile.html')">
             <div class="left">
               <img class="list-item__thumbnail" src="img/42.jpg" />
             </div>
             <div class="center">
                <span class="list-item__title">山田花子</span>
-               <span class="list-item__subtitle">チャット内容</span>
+               <span class="list-item__subtitle">はじめまして</span>
             </div>
           </ons-list-item>
         </ons-list>
@@ -75,7 +79,7 @@
        </ons-fab>
 
        <div class="main_img_div">
-         <img class="main_img" src="img/neko.jpg" alt="Logo" />
+         <img class="main_img" src="img/neko.jpg" />
        </div>
 
         <ons-list>
@@ -161,30 +165,132 @@
     <template id="tab3.html">
       <ons-page>
         <ons-toolbar>
+          <div class="center">プロフィール</div>
+        </ons-toolbar>
+
+        <div class="main_img_div">
+          <ons-fab position="top center" class="camera">
+            <ons-icon icon="camera"></ons-icon>
+          </ons-fab>
+          <img class="main_img" src="img/neko.jpg" />
+        </div>
+        
+        <ons-list>
+          <ons-list-header>フォト</ons-list-header>
+          <ons-list-item>
+            <div class="center container">
+              <div class="item"><img src="img/plus.jpg" class="photo"/></div>
+              <div class="item"><img src="img/plus.jpg" class="photo"/></div>
+              <div class="item"><img src="img/plus.jpg" class="photo"/></div>
+              <div class="item"><img src="img/plus.jpg" class="photo"/></div>
+            </div>
+          </ons-list-item>
+        </ons-list>
+
+        <ons-list>
+          <ons-list-header>基本プロフィール</ons-list-header>
+
+          <ons-list-item>
+            <div class="left profile_head">ニックネーム</div>
+            <div class="center"><ons-input id="username" placeholder="ニックネーム"></ons-input></div>
+          </ons-list-item>
+
+          <ons-list-item>
+            <div class="left profile_head">性別</div>
+            <div class="center">
+              <ons-select id="choose-sel" onchange="editSelects(event)">
+                <option value=""></option>
+                <option value="material">男性</option>
+                <option value="underbar">女性</option>
+              </ons-select>
+            </div>
+          </ons-list-item>
+
+          <ons-list-item>
+            <div class="left profile_head">生まれた年</div>
+            <div class="center">
+                <ons-select id="choose-sel" onchange="editSelects(event)">
+                  <option value=""></option>
+                  <option value="material">1990年代</option>
+                  <option value="underbar">2000年代</option>
+                </ons-select>
+              </div>
+          </ons-list-item>
+
+          <ons-list-item>
+            <div class="left profile_head">地域</div>
+            <div class="center">
+                <ons-select id="choose-sel" onchange="editSelects(event)">
+                  <option value=""></option>
+                  <option value="material">東京</option>
+                  <option value="underbar">千葉</option>
+                </ons-select>
+              </div>
+          </ons-list-item>
+            
+          <ons-list-item>
+            <div class="left profile_head">自己紹介</div>
+            <div class="center">
+              <textarea class="textarea" rows="5" placeholder="自己紹介"></textarea>
+            </div>
+          </ons-list-item>
+            
+        </ons-list>
+      </ons-page>
+    </template>
+  
+    <template id="tab4.html">
+      <ons-page>
+        <ons-toolbar>
           <div class="center">設定</div>
         </ons-toolbar>
 
         <ons-list>
-          <ons-list-header>個人情報</ons-list-header>
-          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('edit_profile.html')">プロフィール</ons-list-item>
+          <ons-list-header>テストページ</ons-list-header>
+          <ons-list-item modifier="chevron" tappable onClick="myNavigator.pushPage('clause.html')">約款</ons-list-item>
         </ons-list>
         
       </ons-page>
     </template>
 
-    <template id="edit_profile.html">
+    <template id="clause.html">
       <ons-page>
         <ons-toolbar>
-          <div class="left"><ons-back-button></ons-back-button></div>
-          <div class="center">プロフィール</div>
+            <div class="left"><ons-back-button></ons-back-button></div>
+            <div class="center">約款同意</div>
         </ons-toolbar>
 
         <ons-list>
-          <ons-list-header>個人情報</ons-list-header>
-          <ons-list-item><ons-input id="username" placeholder="名前"></ons-input></ons-list-item>
-          <ons-list-item><ons-input id="username" placeholder="年齢"></ons-input></ons-list-item>
-          <ons-list-item><textarea class="textarea" rows="5" placeholder="自己紹介"></textarea></ons-list-item>
+          <ons-list-header>利用規約</ons-list-header>
+          <ons-list-item>
+              <ons-card>利用規約<br />あいうえおかきくけこさしすせそ</ons-card>
+          </ons-list-item>
+          <ons-list-item>
+              <div class="left profile_head"><ons-switch></ons-switch></div>
+              <div class="center">同意します。</div>
+          </ons-list-item>
         </ons-list>
+
+        <ons-list>
+          <ons-list-header>プライバシーポリシー</ons-list-header>
+          <ons-list-item>
+              <ons-card>プライバシーポリシー<br />あいうえおかきくけこさしすせそ</ons-card>
+          </ons-list-item>
+          <ons-list-item>
+              <div class="left profile_head"><ons-switch></ons-switch></div>
+              <div class="center">同意します。</div>
+          </ons-list-item>
+        </ons-list>
+
+        <ons-list>
+            <ons-list-item>
+              <div class="center">
+                <ons-button modifier="quiet">満17歳未満</ons-button>
+                <ons-button modifier="quiet">満17歳以上</ons-button>
+              </div>
+            </ons-list-item>
+        </ons-list>
+        
 
       </ons-page>
     </template>

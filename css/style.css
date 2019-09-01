@@ -35,3 +35,22 @@
   width: 180px;
   height: 180px;
 }
+
+.camera {
+  top: 70;
+  left: 70;
+}
+
+.profile_head {
+  width: 25%;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+.container {
+  justify-content: center;
+}
