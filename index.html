@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/onsenui.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
 
   <body>
@@ -44,12 +45,10 @@
               <img class="list-item__thumbnail" src="img/40.jpg" />
             </div>
             <div class="center">
-                <span class="list-item__title">
-                  <span>田中太郎</span>
-                  <span>33歳</span>
-                  <span style="position: absolute; left:  350px;">少し前</span>
-                </span>
-               <span class="list-item__subtitle">よろしく！</span>
+              <div style="width: 20%">田中太郎</div>
+              <div style="width: 10%">33歳</div>
+              <div style="margin-left: auto;">少し前</div>
+              <div style="width: 100%">よろしく！</div>
             </div>
           </ons-list-item>
 
@@ -169,8 +168,9 @@
         </ons-toolbar>
 
         <div class="main_img_div">
-          <ons-fab position="top center" class="camera">
+          <ons-fab position="top center" class="camera" onClick="test();">
             <ons-icon icon="camera"></ons-icon>
+            <input type="file" id="upload_chat" name="file" style="display:none"></input>
           </ons-fab>
           <img class="main_img" src="img/neko.jpg" />
         </div>
