@@ -54,3 +54,22 @@
 .container {
   justify-content: center;
 }
+
+.parent {
+  display: flex;
+  width: 100%;
+}
+.parent01 {
+  justify-content: space-between;
+}
+
+.child {
+  width: 60px;
+  height: 60px;
+  background: #3498db;
+}
+
+.child img {
+  width: 60px;
+  height: 60px;
+}
