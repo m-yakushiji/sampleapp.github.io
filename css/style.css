@@ -1,6 +1,6 @@
 .content {
   text-align: center;
-  padding-bottom: 4em;
+  padding-bottom: 3em;
 }
 
 .send-area {
@@ -11,6 +11,7 @@
   bottom: 0px;
   width: 100%;
   border-top: solid 1px #ccc;
+  background-color: #E7EAED;
 }
 
 .send-area ons-input {
@@ -72,4 +73,50 @@
 .child img {
   width: 60px;
   height: 60px;
+}
+
+.bubble_left {
+     position: relative;
+     display: inline-block;
+     width: 200px; 
+     text-align: center;
+     color:#FFF;
+     padding: 25px;
+     background-color: #f39800;
+     border-radius: 5px;
+}
+.bubble_left:before {
+     content: '';
+     position: absolute;
+     display: block;
+     z-index: 1;
+     border-style: solid;
+     border-color: transparent #f39800;
+     border-width: 10px 10px 10px 0;
+     top: 50%;
+     left: -10px;
+     margin-top: -10px;
+}
+
+.bubble_right {
+     position: relative;
+     display: inline-block;
+     width: 200px; 
+     text-align: center;
+     color:#FFF;
+     padding: 25px;
+     background-color: #21A402;
+     border-radius: 5px;
+}
+.bubble_right:before {
+     content: '';
+     position: absolute;
+     display: block;
+     z-index: 1;
+     border-style: solid;
+     border-color: transparent #21A402;
+     border-width: 10px 0 10px 10px;
+     top: 50%;
+     right: -10px;
+     margin-top: -10px;
 }

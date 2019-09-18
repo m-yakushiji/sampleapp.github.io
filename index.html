@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="">
 
-    <link rel="stylesheet" href="css/dark-onsen-css-components.css">
     <link rel="stylesheet" href="css/onsenui.css">
     <link rel="stylesheet" href="css/onsen-css-components.min.css">
 
@@ -24,11 +23,11 @@
     
     <template id="tab.html">
       <ons-page>
-        <ons-tabbar position="auto">
-          <ons-tab page="tab1.html" label="探す" icon="md-search" active></ons-tab>
-          <ons-tab page="tab2.html" label="メッセージ" icon="ion-md-chatboxes"></ons-tab>
+        <ons-tabbar animation="none">
+          <ons-tab page="tab1.html" label="探す"         icon="md-search" active></ons-tab>
+          <ons-tab page="tab2.html" label="メッセージ"   icon="ion-md-chatboxes"></ons-tab>
           <ons-tab page="tab3.html" label="プロフィール" icon="ion-md-person"></ons-tab>
-          <ons-tab page="tab4.html" label="設定" icon="md-settings"></ons-tab>
+          <ons-tab page="tab4.html" label="設定"         icon="md-settings"></ons-tab>
         </ons-tabbar>
       </ons-page>
     </template>
@@ -143,13 +142,62 @@
           <ons-list id="chats">
             <ons-list-item modifier="nodivider">
               <div class="right">
-                <ons-button style="background-color: green">Hello World</ons-button>
+                <div class="bubble_right">Hello World!</div>
               </div>
             </ons-list-item>
 
             <ons-list-item modifier="nodivider">
-              <ons-button>こんにちは。</ons-button>
-              <span class="list-item__subtitle">田中太郎</span>
+              <div class="left">
+                <img class="list-item__thumbnail" src="img/40.jpg" />
+              </div>
+              <div class="center">
+                <div class="bubble_left">こんにちは。世界。</div>
+              </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="nodivider">
+              <div class="right">
+                <div class="bubble_right">Hello World!</div>
+              </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="nodivider">
+              <div class="left">
+                <img class="list-item__thumbnail" src="img/40.jpg" />
+              </div>
+              <div class="center">
+                <div class="bubble_left">こんにちは。世界。</div>
+              </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="nodivider">
+              <div class="right">
+                <div class="bubble_right">Hello World!</div>
+              </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="nodivider">
+              <div class="left">
+                <img class="list-item__thumbnail" src="img/40.jpg" />
+              </div>
+              <div class="center">
+                <div class="bubble_left">こんにちは。世界。</div>
+              </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="nodivider">
+              <div class="right">
+                <div class="bubble_right">Hello World!</div>
+              </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="nodivider">
+              <div class="left">
+                <img class="list-item__thumbnail" src="img/40.jpg" />
+              </div>
+              <div class="center">
+                <div class="bubble_left">こんにちは。世界。</div>
+              </div>
             </ons-list-item>
 
           </ons-list>
@@ -169,21 +217,26 @@
           <div class="center">プロフィール</div>
         </ons-toolbar>
           <div class="main_img_div">
-            <ons-fab position="top center" class="camera" onClick="test();">
+            <ons-fab position="top right" class="camera" onClick="test('upload_main_img');">
               <ons-icon icon="camera"></ons-icon>
-              <input type="file" id="upload_chat" name="file" style="display:none"></input>
+              <input type="file" accept="image/jpeg, image/png" id="upload_main_img" name="file" style="display:none" onchange="test2(this, 'main_img');"></input>
             </ons-fab>
-            <img class="main_img" src="img/neko.jpg" />
+            <img id="main_img" class="main_img" src="img/neko.jpg" />
           </div>
         <ons-list>
           <ons-list-header>フォト</ons-list-header>
           <ons-list-item>
+            <input type="file" accept="image/jpeg, image/png" id="upload_sub_img1" name="file" style="display:none" onchange="test2(this, 'sub_img1');"></input>
+            <input type="file" accept="image/jpeg, image/png" id="upload_sub_img2" name="file" style="display:none" onchange="test2(this, 'sub_img2');"></input>
+            <input type="file" accept="image/jpeg, image/png" id="upload_sub_img3" name="file" style="display:none" onchange="test2(this, 'sub_img3');"></input>
+            <input type="file" accept="image/jpeg, image/png" id="upload_sub_img4" name="file" style="display:none" onchange="test2(this, 'sub_img4');"></input>
+            <input type="file" accept="image/jpeg, image/png" id="upload_sub_img5" name="file" style="display:none" onchange="test2(this, 'sub_img5');"></input>
             <div class="parent parent01">
-              <div class="child"><img src="img/plus.jpg"/></div>
-              <div class="child"><img src="img/plus.jpg"/></div>
-              <div class="child"><img src="img/plus.jpg"/></div>
-              <div class="child"><img src="img/plus.jpg"/></div>
-              <div class="child"><img src="img/plus.jpg"/></div>
+              <div class="child"><img id="sub_img1" onClick="test('upload_sub_img1');" src="img/plus.jpg"/></div>
+              <div class="child"><img id="sub_img2" onClick="test('upload_sub_img2');" src="img/plus.jpg"/></div>
+              <div class="child"><img id="sub_img3" onClick="test('upload_sub_img3');" src="img/plus.jpg"/></div>
+              <div class="child"><img id="sub_img4" onClick="test('upload_sub_img4');" src="img/plus.jpg"/></div>
+              <div class="child"><img id="sub_img5" onClick="test('upload_sub_img5');" src="img/plus.jpg"/></div>
             </div>
           </ons-list-item>
         </ons-list>
@@ -235,8 +288,8 @@
               <textarea class="textarea" rows="5" placeholder="自己紹介"></textarea>
             </div>
           </ons-list-item>
-            
         </ons-list>
+        
       </ons-page>
     </template>
   
@@ -291,7 +344,6 @@
               </div>
             </ons-list-item>
         </ons-list>
-        
 
       </ons-page>
     </template>
