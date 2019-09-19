@@ -122,8 +122,8 @@
               <img src="img/40.jpg" />
             </div>
             <div class="center">
-               <span class="list-item__title">田中太郎</span>
-               <span class="list-item__subtitle">チャット内容</span>
+              <span class="list-item__title">田中太郎</span>
+              <span class="list-item__subtitle">チャット内容</span>
             </div>
           </ons-list-item>
         </ons-list>
@@ -138,70 +138,44 @@
           <div class="center">田中太郎</div>
         </ons-toolbar>
 
-        <div class="content">
-          <ons-list id="chats">
-            <ons-list-item modifier="nodivider">
-              <div class="right">
-                <div class="bubble_right">Hello World!</div>
-              </div>
-            </ons-list-item>
+      <ons-list id="chats">
+        <ons-list-item modifier="nodivider">
+          <div class="right">
+            <div class="bubble_right">Hello World!</div>
+          </div>
+        </ons-list-item>
 
-            <ons-list-item modifier="nodivider">
-              <div class="left">
-                <img class="list-item__thumbnail" src="img/40.jpg" />
-              </div>
-              <div class="center">
-                <div class="bubble_left">こんにちは。世界。</div>
-              </div>
-            </ons-list-item>
+        <ons-list-item modifier="nodivider">
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/40.jpg" />
+          </div>
+          <div class="center">
+            <div class="bubble_left">こんにちは。世界。</div>
+          </div>
+        </ons-list-item>
 
-            <ons-list-item modifier="nodivider">
-              <div class="right">
-                <div class="bubble_right">Hello World!</div>
-              </div>
-            </ons-list-item>
+        <ons-list-item modifier="nodivider">
+          <div class="right">
+            <div class="bubble_right">Hello World!</div>
+          </div>
+        </ons-list-item>
 
-            <ons-list-item modifier="nodivider">
-              <div class="left">
-                <img class="list-item__thumbnail" src="img/40.jpg" />
-              </div>
-              <div class="center">
-                <div class="bubble_left">こんにちは。世界。</div>
-              </div>
-            </ons-list-item>
+        <ons-list-item modifier="nodivider">
+          <div class="left">
+            <img class="list-item__thumbnail" src="img/40.jpg" />
+          </div>
+          <div class="center">
+            <div class="bubble_left">こんにちは。世界。</div>
+          </div>
+        </ons-list-item>
 
-            <ons-list-item modifier="nodivider">
-              <div class="right">
-                <div class="bubble_right">Hello World!</div>
-              </div>
-            </ons-list-item>
+        <ons-list-item modifier="nodivider">
+          <div class="right">
+            <div class="bubble_right">Hello World!</div>
+          </div>
+        </ons-list-item>
 
-            <ons-list-item modifier="nodivider">
-              <div class="left">
-                <img class="list-item__thumbnail" src="img/40.jpg" />
-              </div>
-              <div class="center">
-                <div class="bubble_left">こんにちは。世界。</div>
-              </div>
-            </ons-list-item>
-
-            <ons-list-item modifier="nodivider">
-              <div class="right">
-                <div class="bubble_right">Hello World!</div>
-              </div>
-            </ons-list-item>
-
-            <ons-list-item modifier="nodivider">
-              <div class="left">
-                <img class="list-item__thumbnail" src="img/40.jpg" />
-              </div>
-              <div class="center">
-                <div class="bubble_left">こんにちは。世界。</div>
-              </div>
-            </ons-list-item>
-
-          </ons-list>
-        </div>
+      </ons-list>
 
         <div class="send-area">
           <ons-input id="message" placeholder="メッセージ"></ons-input>
@@ -217,7 +191,7 @@
           <div class="center">プロフィール</div>
         </ons-toolbar>
           <div class="main_img_div">
-            <ons-fab position="top right" class="camera" onClick="test('upload_main_img');">
+            <ons-fab position="top right" onClick="test('upload_main_img');">
               <ons-icon icon="camera"></ons-icon>
               <input type="file" accept="image/jpeg, image/png" id="upload_main_img" name="file" style="display:none" onchange="test2(this, 'main_img');"></input>
             </ons-fab>
@@ -231,7 +205,7 @@
             <input type="file" accept="image/jpeg, image/png" id="upload_sub_img3" name="file" style="display:none" onchange="test2(this, 'sub_img3');"></input>
             <input type="file" accept="image/jpeg, image/png" id="upload_sub_img4" name="file" style="display:none" onchange="test2(this, 'sub_img4');"></input>
             <input type="file" accept="image/jpeg, image/png" id="upload_sub_img5" name="file" style="display:none" onchange="test2(this, 'sub_img5');"></input>
-            <div class="parent parent01">
+            <div class="parent">
               <div class="child"><img id="sub_img1" onClick="test('upload_sub_img1');" src="img/plus.jpg"/></div>
               <div class="child"><img id="sub_img2" onClick="test('upload_sub_img2');" src="img/plus.jpg"/></div>
               <div class="child"><img id="sub_img3" onClick="test('upload_sub_img3');" src="img/plus.jpg"/></div>
@@ -317,32 +291,32 @@
         <ons-list>
           <ons-list-header>利用規約</ons-list-header>
           <ons-list-item>
-              <ons-card>利用規約<br />あいうえおかきくけこさしすせそ</ons-card>
+            <ons-card>利用規約<br />あいうえおかきくけこさしすせそ</ons-card>
           </ons-list-item>
           <ons-list-item>
-              <div class="left profile_head"><ons-switch></ons-switch></div>
-              <div class="center">同意します。</div>
+            <div class="left profile_head"><ons-switch></ons-switch></div>
+            <div class="center">同意します。</div>
           </ons-list-item>
         </ons-list>
 
         <ons-list>
           <ons-list-header>プライバシーポリシー</ons-list-header>
           <ons-list-item>
-              <ons-card>プライバシーポリシー<br />あいうえおかきくけこさしすせそ</ons-card>
+            <ons-card>プライバシーポリシー<br />あいうえおかきくけこさしすせそ</ons-card>
           </ons-list-item>
           <ons-list-item>
-              <div class="left profile_head"><ons-switch></ons-switch></div>
-              <div class="center">同意します。</div>
+            <div class="left profile_head"><ons-switch></ons-switch></div>
+            <div class="center">同意します。</div>
           </ons-list-item>
         </ons-list>
 
         <ons-list>
-            <ons-list-item>
-              <div class="center">
-                <ons-button modifier="quiet">満17歳未満</ons-button>
-                <ons-button modifier="quiet">満17歳以上</ons-button>
-              </div>
-            </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <ons-button modifier="quiet">満17歳未満</ons-button>
+              <ons-button modifier="quiet">満17歳以上</ons-button>
+            </div>
+          </ons-list-item>
         </ons-list>
 
       </ons-page>
