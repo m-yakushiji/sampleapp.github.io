@@ -74,13 +74,13 @@
           <div class="center">プロフィール</div>
         </ons-toolbar>
 
-       <ons-fab position="top right">
-         <ons-icon icon="comment"></ons-icon>
-       </ons-fab>
+        <ons-fab position="top right" onClick="myNavigator.pushPage('request.html')">
+          <ons-icon icon="comment"></ons-icon>
+        </ons-fab>
 
-       <div class="main_img_div">
-         <img class="main_img" src="img/neko.jpg" />
-       </div>
+        <div class="main_img_div">
+          <img class="main_img" src="img/neko.jpg" />
+        </div>
 
         <ons-list>
           <ons-list-header>個人情報</ons-list-header>
@@ -92,6 +92,20 @@
       </ons-page>
     </template>
 
+    <template id="request.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center">友達申請</div>
+        </ons-toolbar>
+            <div class="request_message_area">
+              <textarea rows="7" cols="40"></textarea>
+            </div>
+            <div style="text-align: center;">
+              <ons-button>申請</ons-button>
+            </div>
+      </ons-page>
+    </template>
 
     <template id="tab2.html">
       <ons-page>
@@ -138,44 +152,44 @@
           <div class="center">田中太郎</div>
         </ons-toolbar>
 
-      <ons-list id="chats">
-        <ons-list-item modifier="nodivider">
-          <div class="right">
-            <div class="bubble_right">Hello World!</div>
-          </div>
-        </ons-list-item>
+        <ons-list id="chats">
+          <ons-list-item modifier="nodivider">
+            <div class="right">
+              <div class="bubble_right">Hello World!</div>
+            </div>
+          </ons-list-item>
 
-        <ons-list-item modifier="nodivider">
-          <div class="left">
-            <img class="list-item__thumbnail" src="img/40.jpg" />
-          </div>
-          <div class="center">
-            <div class="bubble_left">こんにちは。世界。</div>
-          </div>
-        </ons-list-item>
+          <ons-list-item modifier="nodivider">
+            <div class="left">
+              <img class="list-item__thumbnail" src="img/40.jpg" />
+            </div>
+            <div class="center">
+              <div class="bubble_left">こんにちは。世界。</div>
+            </div>
+          </ons-list-item>
 
-        <ons-list-item modifier="nodivider">
-          <div class="right">
-            <div class="bubble_right">Hello World!</div>
-          </div>
-        </ons-list-item>
+          <ons-list-item modifier="nodivider">
+            <div class="right">
+              <div class="bubble_right">Hello World!</div>
+            </div>
+          </ons-list-item>
 
-        <ons-list-item modifier="nodivider">
-          <div class="left">
-            <img class="list-item__thumbnail" src="img/40.jpg" />
-          </div>
-          <div class="center">
-            <div class="bubble_left">こんにちは。世界。</div>
-          </div>
-        </ons-list-item>
+          <ons-list-item modifier="nodivider">
+            <div class="left">
+              <img class="list-item__thumbnail" src="img/40.jpg" />
+            </div>
+            <div class="center">
+              <div class="bubble_left">こんにちは。世界。</div>
+            </div>
+          </ons-list-item>
 
-        <ons-list-item modifier="nodivider">
-          <div class="right">
-            <div class="bubble_right">Hello World!</div>
-          </div>
-        </ons-list-item>
+          <ons-list-item modifier="nodivider">
+            <div class="right">
+              <div class="bubble_right">Hello World!</div>
+            </div>
+          </ons-list-item>
 
-      </ons-list>
+        </ons-list>
 
         <div class="send-area">
           <ons-input id="message" placeholder="メッセージ"></ons-input>

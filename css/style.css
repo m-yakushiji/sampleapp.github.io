@@ -3,10 +3,12 @@
   box-sizing: border-box;
   line-height: 49px;
   position: fixed;
+  z-index: 3;
   bottom: 0px;
   width: 100%;
   border-top: solid 1px #ccc;
   background-color: #E7EAED;
+
 }
 
 .send-area ons-input {
@@ -56,6 +58,15 @@
 .child img {
   width: 60px;
   height: 60px;
+}
+
+.request_message_area {
+  text-align: center;
+  padding: 20px 0px 20px 0;
+}
+
+#chats {
+  margin-bottom: 48px;
 }
 
 /* ------------------------------------------------------------------------------ */
